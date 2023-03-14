@@ -129,10 +129,10 @@ while True:
                 x_pos+=14
                 memory+='/'
             elif Button_DEL_rect.collidepoint(pygame.mouse.get_pos()):
-                x_pos-=14
                 if len(memory)>0:
                     Num_list.remove(Num_list[-1])
                     memory.replace(memory[-1],'')
+                    x_pos-=14
             elif Button_AC_rect.collidepoint(pygame.mouse.get_pos()):
                 Num_list,memory = [],''
                 x_pos = 36
@@ -151,5 +151,5 @@ while True:
                 screen.blit(Num,(x_pos,107))
                 Num_list.append((Num,(x_pos,107)))
                 x_pos+=14
-        
+                
     pygame.display.update()
