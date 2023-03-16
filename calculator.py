@@ -130,6 +130,7 @@ while True:
                 elif Button_AC_rect.collidepoint(pygame.mouse.get_pos()):
                     Num_list,memory = [],''
                     x_pos = 36
+                    times_bang = 0
                 elif Button_bang_rect.collidepoint(pygame.mouse.get_pos()) and times_bang == 0:
                     times_bang = 1
                     if memory.count('+') == memory.count('-') == memory.count('*') == memory.count('/') == 0:
@@ -150,4 +151,5 @@ while True:
                     Num = Num_font.render(result,True,(41,28,41))
                     Num_list.append((Num,(x_pos_result,152)))
                     memory+='='
+                    x_pos+=11
     pygame.display.update()
