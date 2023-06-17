@@ -118,7 +118,7 @@ def Button_event():
 screen = pygame.display.set_mode((screen_width,screen_height))
 pygame.display.set_caption('Simple Calculator')
 
-icon='Pictures\Capture.png'
+icon='img/Capture.PNG'
 
 icon_image = pygame.image.load(icon)
 pygame.display.set_icon(icon_image)
