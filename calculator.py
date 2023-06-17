@@ -3,6 +3,7 @@ pygame.init()
 
 screen_width=274
 screen_height=396
+
 def Button_event():
     global Num_list,x_pos,memory,result,times_bang
     if Button_0_rect.collidepoint(pygame.mouse.get_pos()):
@@ -116,6 +117,11 @@ def Button_event():
 
 screen = pygame.display.set_mode((screen_width,screen_height))
 pygame.display.set_caption('Simple Calculator')
+
+icon='Pictures\Capture.png'
+
+icon_image = pygame.image.load(icon)
+pygame.display.set_icon(icon_image)
 
 
 Num_font = pygame.font.Font('img/digital-7.ttf',25)
