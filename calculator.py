@@ -1,7 +1,8 @@
 import pygame,sys
 pygame.init()
 
-
+screen_width=274
+screen_height=396
 def Button_event():
     global Num_list,x_pos,memory,result,times_bang
     if Button_0_rect.collidepoint(pygame.mouse.get_pos()):
@@ -113,7 +114,7 @@ def Button_event():
             x_pos+=11
 
 
-screen = pygame.display.set_mode((274,396))
+screen = pygame.display.set_mode((screen_width,screen_height))
 pygame.display.set_caption('Simple Calculator')
 
 
@@ -161,5 +162,10 @@ while True:
             sys.exit()
         elif event.type == pygame.MOUSEBUTTONDOWN:
             Button_event()
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE:
+                screen_width+=0
+                screen_height+=0
+                screen = pygame.display.set_mode((screen_width, screen_height), pygame.RESIZABLE)
 
     pygame.display.update()
