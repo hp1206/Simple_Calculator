@@ -1,4 +1,7 @@
+import os
 import pygame,sys
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
 pygame.init()
 
 screen_width=274
@@ -118,15 +121,15 @@ def Button_event():
 screen = pygame.display.set_mode((screen_width,screen_height))
 pygame.display.set_caption('Simple Calculator')
 
-icon='img/Capture.PNG'
-
+icon = os.path.join(script_dir, 'img', 'Capture.PNG')
 icon_image = pygame.image.load(icon)
 pygame.display.set_icon(icon_image)
 
+Num_font = pygame.font.Font(os.path.join(script_dir, 'img', 'digital-7.ttf'), 25)
 
-Num_font = pygame.font.Font('img/digital-7.ttf',25)
-calculator_screen = pygame.image.load('img/screen.png')
-calculator_keyboard = pygame.image.load('img/keyboard.png')
+      
+calculator_screen = pygame.image.load(os.path.join(script_dir, 'img', 'screen.png'))
+calculator_keyboard = pygame.image.load(os.path.join(script_dir, 'img', 'keyboard.png'))
 
 
 Button_0_rect    = pygame.Rect(24,331,41,28)
