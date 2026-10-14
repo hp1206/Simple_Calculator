@@ -222,9 +222,9 @@ Button_chia_rect = pygame.Rect(212, 251, 41, 28)
 Button_DEL_rect  = pygame.Rect(165, 211, 41, 28)
 Button_AC_rect   = pygame.Rect(212, 211, 41, 28)
 
-Button_dot_rect = pygame.Rect(71,  331, 41, 28)   # dấu .
-Button_pm_rect  = pygame.Rect(118, 331, 41, 28)   # +/-
-Button_pct_rect = pygame.Rect(165, 331, 41, 28)   # %
+Button_dot_rect = pygame.Rect(71,  331, 41, 28)
+Button_pm_rect  = pygame.Rect(118, 331, 41, 28)
+Button_pct_rect = pygame.Rect(165, 331, 41, 28)
 
 NEW_BTN_BG     = (78, 65, 78)
 NEW_BTN_BORDER = (50, 40, 50)
